@@ -7308,5 +7308,91 @@
       }
     },
     "basis": "INDICATIVE_YAHOO_HOURLY_NOT_EXECUTABLE"
+  },
+  {
+    "timestamp": "2026-11-27T04:19:54.555710+00:00",
+    "workers": {
+      "S01": {
+        "generation": "S01a",
+        "equity": 98.6075,
+        "ledger_events": 4,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S02": {
+        "generation": "S02b",
+        "equity": 97.3485,
+        "ledger_events": 13,
+        "action": "BUY SOL-USD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S03": {
+        "generation": "S03a",
+        "equity": 92.2209,
+        "ledger_events": 31,
+        "action": "SELL ETH-USD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S04": {
+        "generation": "S04a",
+        "equity": 101.1235,
+        "ledger_events": 30,
+        "action": "SELL SOL-USD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S05": {
+        "generation": "S05a",
+        "equity": 91.1917,
+        "ledger_events": 23,
+        "action": "BUY ETH-USD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S06": {
+        "generation": "S06b",
+        "equity": 97.3485,
+        "ledger_events": 13,
+        "action": "BUY SOL-USD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S07": {
+        "generation": "S07b",
+        "equity": 92.793,
+        "ledger_events": 26,
+        "action": "BUY BTC-USD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S08": {
+        "generation": "S08a",
+        "equity": 100.0,
+        "ledger_events": 0,
+        "action": "HOLD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S09": {
+        "generation": "S09b",
+        "equity": 94.9947,
+        "ledger_events": 21,
+        "action": "BUY BTC-USD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      },
+      "S10": {
+        "generation": "S10b",
+        "equity": 97.8378,
+        "ledger_events": 11,
+        "action": "BUY SOL-USD",
+        "missing_quotes": false,
+        "council": "REVIEW_REQUIRED"
+      }
+    },
+    "basis": "INDICATIVE_YAHOO_HOURLY_NOT_EXECUTABLE"
   }
 ]
