@@ -73,6 +73,16 @@
       "qty": 1,
       "reason": "stop_loss (-100.0%)",
       "submitted": "2026-11-25T16:01:51"
+    },
+    {
+      "order_id": "e5e29e94-1980-49bc-8cf6-187535cc940a",
+      "lot_id": "4b4127fdb4d3",
+      "bucket_id": 21,
+      "strategy_id": "S365",
+      "occ_symbol": "BAC261211C00049000",
+      "qty": 1,
+      "reason": "take_profit (+71.4%)",
+      "submitted": "2026-11-27T09:42:55"
     }
   ],
   "bucket_open_premium": {
