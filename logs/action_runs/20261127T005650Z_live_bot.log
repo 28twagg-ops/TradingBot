@@ -1,0 +1,64 @@
+00:56:51  INFO      Mode: ext_exits
+/home/runner/work/TradingBot/TradingBot/rubber_band_bot.py:1754: DeprecationWarning: Order.order_type is deprecated. Use type instead.
+  f"type={getattr(o,'order_type','?')}  id={o.id}")
+00:56:51  INFO        SELL order cancelled ACN  type=OrderType.LIMIT  id=806c381d-e3d1-4c40-a6eb-5eedf8c7d853
+00:56:51  INFO        SELL LIMIT [EXT HRS] ACN  qty=0.14584068  limit=$240.13  id=a8725a7f-6c06-4317-a6d9-5c577060fa79
+00:56:56  INFO        SELL LIMIT[EXT] pending for ACN — 9:35am will follow up
+00:56:57  INFO        Daily log -> logs/daily/2026-11-27.md
+
++========================================================================+
+|  RUBBER BAND BOT  v8                                                   |
++------------------------------------------------------------------------+
+|  Mode                                                         EXT_EXITS|
+|  Time                                                         00:56 UTC|
+|  Regime                                                      CORRECTION|
+|  Universe                                                          both|
+|  Equity                                                         $229.89|
++========================================================================+
+
++========================================================================+
+|                           STOCKS EXIT CHECK                            |
++========================================================================+
+|  Exit log~  stop-0.5% / 3d max  (midline skipped — close already final)|
++------------------------------------------------------------------------+
+|  AES  P&L +0.0%  $+0.00          HOLDING until 9:35am scan (Pullback50)|
+|  ACN  P&L +3.4%  $+1.16        EXIT [EXTENDED HRS]: max_hold 3d (+3.4%)|
+|  ACN                              SELL pending (after-hours limit open)|
++========================================================================+
+
++========================================================================+
+|                          EXTENDED HOURS SELLS                          |
++========================================================================+
+|                                                                        |
+|  No extended-hours sells this run.                                     |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                            EXIT RUN SUMMARY                            |
++========================================================================+
+|  Mode                                                         ext_exits|
+|  Candidates                                                           2|
+|  Deferred/Skipped                                      already logged 0|
+|  Data skips                                             no price data 0|
+|  Se~  1 attempted  |  0 filled  |  0 partial  |  1 pending  |  0 failed|
+|  Holds                                                                1|
+|  Logged exits                                                         0|
++========================================================================+
+
++========================================================================+
+|            OPTIONS SLEEVE  (managed by options_live_micro)             |
++========================================================================+
+|                                                                        |
+|  No open option positions.                                             |
+|                                                                        |
++========================================================================+
+
++========================================================================+
+|                      STOP-LOSS BREACHES THIS RUN                       |
++========================================================================+
+|  None                                                                  |
++========================================================================+
+|  Stop-loss look file                  logs/stop_losses_to_look_into.txt|
+|  New investigations added                                             1|
++========================================================================+
