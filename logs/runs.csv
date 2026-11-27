@@ -14143,3 +14143,4 @@ timestamp,mode,regime,equity,cash,signals,entries,exits,open_positions,tickers,u
 2026-11-27 16:42:04,exits,correction,230.15,195.47,0,0,0,1,APA,both
 2026-11-27 16:47:03,exits,correction,230.1,195.47,0,0,0,1,APA,both
 2026-11-27 16:51:55,exits,correction,230.19,195.47,0,0,0,1,APA,both
+2026-11-27 16:56:52,exits,correction,230.22,195.47,0,0,0,1,APA,both
