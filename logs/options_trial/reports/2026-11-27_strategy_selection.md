@@ -1,6 +1,6 @@
 # Options strategy selection report — 2026-11-27
 
-_Generated 2026-11-27T09:48:09.612963_
+_Generated 2026-11-27T09:52:44.462416_
 
 ## Summary
 
@@ -11,7 +11,7 @@ _Generated 2026-11-27T09:48:09.612963_
 
 ## Attribution health
 
-- Total exits: **4117**
+- Total exits: **4118**
 - Orphan exits (b0/orphan_reconcile): **423**
 - Orphan rate: **10.3%** (warn if >10%)
 - **ALERT:** orphan_rate > 10% — check client_order_id tagging / fill attribution before trusting strategy P&L.
@@ -89,13 +89,13 @@ _Generated 2026-11-27T09:48:09.612963_
 | S209 (GapDown_Recovery) | 3d ATM gap-recovery | watch | 7 | 0.0 | -64.71 | -80.40 | -68.79 | -50.75 | 121 | 0 | 0 | $-212.00 | 71.4% | insufficient sample (<8 exits) |
 | S395 (GapDown_ITM3) | 3d | watch | 1 | 0.0 | -68.75 | -68.75 | -68.75 | -68.75 | 44 | 0 | 0 | $-44.00 | 100.0% | insufficient sample (<8 exits) |
 | S401 (Any_Gap_Down_Small) | 3d | drop | 135 | 49.6 | +0.00 | -84.10 | -51.33 | +230.91 | 119 | 0 | 0 | $+928.00 | 23.7% | non-positive median return |
+| S365 (RubberBand_14DTE) | 14d | drop | 45 | 46.7 | +0.00 | -65.40 | -53.49 | +70.74 | 119 | 2 | 2 | $-75.00 | 31.1% | non-positive median return |
 | S412 (RubberBand_OTM3) | 3d | drop | 68 | 44.1 | -3.57 | -58.23 | -50.00 | +125.40 | 119 | 0 | 0 | $+184.00 | 17.6% | non-positive median return |
 | S408 (RubberBand_ITM1) | 3d | drop | 67 | 43.3 | -6.25 | -81.48 | -59.63 | +573.13 | 116 | 0 | 0 | $+1,137.00 | 17.9% | manually paused — excluded from new entries & reflected P&L |
 | S406 (RubberBand_ITM3) | 3d | drop | 197 | 48.2 | -6.38 | -59.36 | -47.37 | +167.90 | 119 | 9 | 9 | $+2,867.00 | 12.2% | non-positive median return |
 | S210 (MA_Cross_8_21) | 3d ATM MA cross 8/21 | drop | 118 | 45.8 | -7.45 | -69.78 | -51.66 | +84.25 | 123 | 0 | 0 | $+58.00 | 15.3% | non-positive median return |
 | S398 (GapDown_ATM) | 3d | drop | 65 | 47.7 | -18.42 | -68.25 | -55.56 | +168.45 | 119 | 0 | 0 | $+765.00 | 24.6% | non-positive median return |
 | S356 (GapDown_14DTE) | 14d | drop | 43 | 48.8 | -18.92 | -53.32 | -49.51 | +58.62 | 119 | 2 | 2 | $+462.00 | 44.2% | non-positive median return |
-| S365 (RubberBand_14DTE) | 14d | drop | 44 | 45.5 | -23.91 | -65.46 | -54.35 | +66.21 | 119 | 2 | 1 | $-121.00 | 31.8% | non-positive median return |
 | S174 (RubberBand long call EOD) | RubberBand (dropped) | drop | 119 | 36.1 | -25.00 | -89.83 | -71.19 | +36.67 | 144 | 0 | 0 | $-1,658.19 | 50.4% | non-positive median return |
 | S350 (GapDown_0DTE) | 0d | drop | 65 | 44.6 | -28.26 | -65.10 | -51.35 | +160.66 | 119 | 2 | 2 | $+687.00 | 23.1% | non-positive median return |
 | S361 (RubberBand_2DTE) | 2d | drop | 81 | 43.2 | -30.43 | -66.67 | -53.52 | +253.33 | 119 | 2 | 2 | $+22.00 | 17.3% | non-positive median return |
@@ -277,7 +277,7 @@ _Pipeline evaluation as of 2026-11-27. Auto-kill thresholds: median<-25% at n>=1
 | S362 | RubberBand_3DTE | 75 | +25.45% | 59% | INSUFFICIENT | 119 |
 | S363 | RubberBand_5DTE | 41 | -65.38% | 39% | INSUFFICIENT | 116 |
 | S364 | RubberBand_7DTE | 78 | -43.27% | 45% | INSUFFICIENT | 119 |
-| S365 | RubberBand_14DTE | 44 | -23.91% | 45% | INSUFFICIENT | 119 |
+| S365 | RubberBand_14DTE | 45 | +0.00% | 47% | INSUFFICIENT | 119 |
 | S366 | RubberBand_21DTE | 21 | -49.12% | 43% | INSUFFICIENT | 115 |
 | S367 | RubberBand_30DTE | 3 | -48.89% | 0% | WATCH | 115 |
 | S368 | BBSqueeze_0DTE | 0 | — | — | NEW | 0 |
