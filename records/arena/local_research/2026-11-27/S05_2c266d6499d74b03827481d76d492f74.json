@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "kind": "local_research_only",
+  "event_id": "2c266d6499d74b03827481d76d492f74",
+  "worker": "S05",
+  "cycle": "2026-11-27T07:19Z",
+  "generation_index": 0,
+  "model": "qwen3:4b-instruct",
+  "research_only": true,
+  "live_trading": false,
+  "event": {
+    "worker": "S05",
+    "cycle": "2026-11-27T07:19Z",
+    "generation_index": 0,
+    "status": "RESEARCH_IDEA_NEEDS_DATA",
+    "source": "Local Ollama research-only",
+    "experimental": true,
+    "live_trading": false,
+    "ai_requests": 1,
+    "validation_issue": null,
+    "topic": "regime shifts in cryptocurrency markets with measurable thresholds and fee-embedded performance vali",
+    "strategy": null,
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "fundamentals",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "action": "RESEARCH_ONLY_NEEDS_DATA",
+    "experiment_id": "179e98d655029d",
+    "sources_found": 4,
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bing",
+        "url": "https://www.bing.com/",
+        "snippet": "OK.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Ask a question and get a clear answer from trusted sources, powered by Yahoo Scout.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com.nf/webhp?gl=nf&hl=en&gws_rd=cr&pws=0",
+        "snippet": "Advertising Business Solutions About Google Google.com © 2026 - Privacy - Terms",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+    "provider": "LOCAL_OLLAMA",
+    "model": "qwen3:4b-instruct",
+    "local_metrics": {
+      "elapsed_seconds": 133.617,
+      "load_seconds": 0.038,
+      "eval_count": 299,
+      "prompt_eval_count": 1463,
+      "tokens_per_second": 4.452,
+      "retries": 0,
+      "hardware_snapshot": {
+        "cpu_percent": 16.0,
+        "free_ram_gb": 9.07,
+        "total_ram_gb": 31.67
+      }
+    },
+    "research_only": true
+  },
+  "experiment": {
+    "cycle": "2026-11-27T07:19Z",
+    "id": "179e98d655029d",
+    "topic": "regime shifts in cryptocurrency markets with measurable thresholds and fee-embedded performance vali",
+    "hypothesis": "A 30-minute opening range breakout in BTC-USD with a 2% threshold initiates a genuine new regime with a probability greater than 0.05, as evidenced by a directional movement that persists beyond the opening range.",
+    "candidate": null,
+    "symbol": "BTC-USD",
+    "test": {
+      "status": "PENDING_PROPER_HISTORICAL_DATA",
+      "needed": [
+        "hourly_close",
+        "fundamentals",
+        "volume",
+        "order_book"
+      ],
+      "note": "No misleading proxy: hypothesis requires unavailable inputs or rule expression."
+    },
+    "paper_action": "RESEARCH_ONLY_NEEDS_DATA",
+    "validation_issue": null,
+    "falsification_test": "If the 30-minute opening range breakout in BTC-USD with a 2% threshold fails to persist beyond the opening range, and this failure is observed in at least 100 independent out-of-sample hours with realistic fees, latency, and slippage applied, then the hypothesis is falsified.",
+    "source_search": {
+      "query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+      "attempted": [
+        "web",
+        "academic"
+      ],
+      "matches": 4
+    },
+    "source_leads": [
+      {
+        "platform": "web",
+        "title": "Bing",
+        "url": "https://www.bing.com/",
+        "snippet": "OK.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Yahoo Search - Web Search",
+        "url": "https://search.yahoo.com/",
+        "snippet": "Ask a question and get a clear answer from trusted sources, powered by Yahoo Scout.",
+        "read_level": "public_search_result_only"
+      },
+      {
+        "platform": "web",
+        "title": "Google",
+        "url": "https://www.google.com.nf/webhp?gl=nf&hl=en&gws_rd=cr&pws=0",
+        "snippet": "Advertising Business Solutions About Google Google.com © 2026 - Privacy - Terms",
+        "read_level": "public_search_result_only"
+      }
+    ],
+    "next_search_query": "search for academic papers or technical analysis studies on regime shifts in cryptocurrency markets with measurable thresholds and",
+    "preferred_sources": [
+      "web",
+      "academic"
+    ],
+    "site_domain": null,
+    "research_data_requirements": [
+      "hourly_close",
+      "fundamentals",
+      "volume",
+      "order_book"
+    ],
+    "hypothesis_timeframe": "hourly",
+    "rule_expressible_as_candidate": false,
+    "limitations": "External search snippets unverified; hourly close proxies not executable quotes",
+    "local_llama_leads_considered": 0
+  }
+}
