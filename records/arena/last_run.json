@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-27T22:46:58.773109+00:00",
+  "timestamp": "2026-11-28T07:51:49.285494+00:00",
   "market_source": "Yahoo completed 1h bars, INDICATIVE not executable fills",
   "results": {
     "S01": {
@@ -12,7 +12,7 @@
       "missing_quotes": []
     },
     "S02": {
-      "action": "SELL SOL-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 96.86312513,
       "equity": 96.8631,
@@ -21,10 +21,10 @@
       "missing_quotes": []
     },
     "S03": {
-      "action": "BUY ETH-USD",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 22.31188735,
-      "equity": 93.2064,
+      "equity": 92.9813,
       "ledger_events": 32,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -39,16 +39,16 @@
       "missing_quotes": []
     },
     "S05": {
-      "action": "SELL ETH-USD",
+      "action": "HOLD",
       "generation_index": 0,
       "cash": 67.92622619,
-      "equity": 89.3695,
+      "equity": 89.2114,
       "ledger_events": 25,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
     },
     "S06": {
-      "action": "SELL SOL-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 96.86312513,
       "equity": 96.8631,
@@ -57,10 +57,10 @@
       "missing_quotes": []
     },
     "S07": {
-      "action": "SELL BTC-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 55.22903065,
-      "equity": 92.5087,
+      "equity": 92.4349,
       "ledger_events": 27,
       "council": "REVIEW_REQUIRED",
       "missing_quotes": []
@@ -75,7 +75,7 @@
       "missing_quotes": []
     },
     "S09": {
-      "action": "SELL BTC-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 93.93450688,
       "equity": 93.9345,
@@ -84,7 +84,7 @@
       "missing_quotes": []
     },
     "S10": {
-      "action": "SELL SOL-USD",
+      "action": "HOLD",
       "generation_index": 1,
       "cash": 97.35001136,
       "equity": 97.35,
