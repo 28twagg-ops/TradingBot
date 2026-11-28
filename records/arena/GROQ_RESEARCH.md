@@ -6,6 +6,11 @@ Indicative historical closes are NOT executable quotes or real profits.
 
 | UTC cycle | Worker | Topic | Experiment | Paper-only decision |
 |---|---|---|---|---|
+| 2026-11-28T12:20Z | S04a | gap_down_quality | 3f8cd1b3f747f0 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-28T12:20Z | S08a | Low hourly realized volatility predicts larger n | a9a726b9c934fe | RESEARCH_ONLY_NEEDS_DATA |
+| 2026-11-28T12:19Z | S05a | BTC-USD hourly trend persistence | f40d9e755f7fe1 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-28T12:18Z | S03a | ETH-USD hourly mean reversion at 24‑hour lag | 3d3de5d2064890 | RESEARCH_ONLY_NEEDS_REVISION |
+| 2026-11-28T12:18Z | S01a | BTC-USD hourly trend persistence | b5c67b9b821994 | RESEARCH_ONLY_NEEDS_DATA |
 | 2026-11-28T10:25Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 9615f1842c6a1f | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-28T10:24Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | 7e1fa14a06bdba | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-28T10:24Z | S02b | BTC-USD hourly trend persistence | e335905dc74158 | RESEARCH_ONLY_NEEDS_REVISION |
@@ -36,11 +41,6 @@ Indicative historical closes are NOT executable quotes or real profits.
 | 2026-11-27T14:02Z | S05a | BTC-USD hourly breakout based on 24‑hour high +  | 7202e774257ffc | HOLD |
 | 2026-11-27T14:02Z | S03a | ETH-USD hourly mean reversion at 24‑hour lag | 62df119a2a6b1c | RESEARCH_ONLY_NEEDS_REVISION |
 | 2026-11-27T14:01Z | S01a | BTC-USD hourly trend persistence | 070863a729580e | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-27T13:07Z | S09b | BTC-USD hourly trend reversal after sustained 10 | 1ee5b5ca8a1e62 | HOLD_INVALID_MODEL_DECISION |
-| 2026-11-27T13:07Z | S10b | ETH-USD hourly mean reversion after 5% breakout  | ec20d41267172e | RESEARCH_ONLY_NEEDS_DATA |
-| 2026-11-27T13:06Z | S02b | BTC-USD hourly trend persistence | 93c6961930e417 | HOLD_INVALID_MODEL_DECISION |
-| 2026-11-27T13:05Z | S06b | BTC-USD hourly SMA trend continuation | e5fc05f9604260 | HOLD |
-| 2026-11-27T13:05Z | S07b | Hourly trend persistence in BTC-USD across volat | aa6e88a0cda5bc | RESEARCH_ONLY_NEEDS_REVISION |
 
 Unvalidated or inaccessible-data ideas remain research only.
 No real-money trading or paid fallback.
